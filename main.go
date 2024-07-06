@@ -57,13 +57,13 @@ func main() {
 			fmt.Printf("Response: %s\n", body)
 
 			// 每隔一段时间发送一次请求
-			sleepDuration := time.Duration(rand.Intn(21) + 20)
+			sleepDuration := time.Duration(rand.Intn(31) + 20)
 			time.Sleep(sleepDuration * time.Second)
 			fmt.Printf("run %s finish, sleep %ss \n", uid, sleepDuration)
 		}
 
 		// 每隔一段时间发送一次请求
-		sleepDurationALL := time.Duration(rand.Intn(21) + 20)
+		sleepDurationALL := time.Duration(rand.Intn(240) + 360)
 		time.Sleep(sleepDurationALL * time.Second)
 		fmt.Printf("run all finish, sleep %ss \n", sleepDurationALL)
 	}
