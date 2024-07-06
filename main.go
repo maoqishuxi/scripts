@@ -33,6 +33,7 @@ func main() {
 	// 循环发送请求
 	for {
 		for _, uid := range uids {
+			fmt.Printf("%s start run %s \n", time.Now().Format("2006-01-02 15:04:05"), uid)
 			// 创建 HTTP 请求
 			req, err := http.NewRequest("GET", targetURL+uid, nil)
 			if err != nil {
@@ -58,13 +59,13 @@ func main() {
 
 			// 每隔一段时间发送一次请求
 			sleepDuration := time.Duration(rand.Intn(31) + 20)
-			fmt.Printf("run %s finish, sleep %ss \n", uid, sleepDuration)
+			fmt.Printf("%s run %s finish, sleep %s \n", time.Now().Format("2006-01-02 15:04:05"), uid, sleepDuration)
 			time.Sleep(sleepDuration * time.Second)
 		}
 
 		// 每隔一段时间发送一次请求
 		sleepDurationALL := time.Duration(rand.Intn(240) + 360)
-		fmt.Printf("run all finish, sleep %ss \n", sleepDurationALL)
+		fmt.Printf("%s run all finish, sleep %s \n", time.Now().Format("2006-01-02 15:04:05"), sleepDurationALL)
 		time.Sleep(sleepDurationALL * time.Second)
 	}
 }
