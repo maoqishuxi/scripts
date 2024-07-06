@@ -47,14 +47,14 @@ func main() {
 			}
 
 			// 读取响应
-			body, err := io.ReadAll(resp.Body)
+			_, err = io.ReadAll(resp.Body)
 			if err != nil {
 				log.Printf("Failed to read response body: %v", err)
 			}
 			resp.Body.Close()
 
 			// 打印响应
-			fmt.Printf("Response: %s\n", body)
+			// fmt.Printf("Response: %s\n", body)
 
 			// 每隔一段时间发送一次请求
 			sleepDuration := time.Duration(rand.Intn(31) + 20)
