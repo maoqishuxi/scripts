@@ -16,7 +16,8 @@ func main() {
 	targetURL := "https://weibo.julai.fun/api/weibo?uid="
 
 	// 代理 URL
-	proxyURL, err := url.Parse("http://127.0.0.1:1080")
+	proxyURL, err := url.Parse("http://192.168.0.208:1080")
+	// proxyURL, err := url.Parse("http://127.0.0.1:1080")
 	if err != nil {
 		log.Fatalf("Failed to parse proxy URL: %v", err)
 	}
