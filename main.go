@@ -14,6 +14,7 @@ import (
 func main() {
 	// 目标 URL
 	targetURL := "https://weibo.julai.fun/api/weibo?uid="
+	// targetURL := "http://localhost:3000/api/weibo?uid="
 
 	// 代理 URL
 	proxyURL, err := url.Parse("http://192.168.0.208:1080")
