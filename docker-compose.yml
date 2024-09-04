@@ -1,0 +1,7 @@
+version: "3"
+services:
+  web:
+    image: script
+    build: .
+    ports:
+      - "9001:3001"

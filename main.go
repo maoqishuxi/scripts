@@ -21,7 +21,6 @@ func main() {
 			}
 
 			// 目标 URL
-			// targetURL := fmt.Sprintf("https://weibo-nu.vercel.app/api/weibo?uid=%s&page=%d&count=%d", uid.UID, 1, 10)
 			targetURL := fmt.Sprintf("http://supabase.julai.fun:9000/api/weibo?uid=%s&page=%d&count=%d", uid.UID, 1, 10)
 
 			fmt.Printf("%s start run %s %s \n", time.Now().Format("2006-01-02 15:04:05"), uid.ScreenName, uid.UID)
